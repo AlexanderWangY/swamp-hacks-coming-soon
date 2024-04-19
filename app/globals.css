@@ -5,3 +5,16 @@
 :root {
   background-color: rgb(11, 11, 11);
 }
+
+::-webkit-scrollbar {
+  width: 3px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #242424; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Add rounded corners to the scrollbar thumb */
+}

@@ -3,9 +3,9 @@ import Title from '@/components/title/title';
 
 export default function Home() {
   return (
-    <div className='flex flex-col h-screen border'>
+    <div className='flex h-screen flex-col'>
       <Header />
-      <main className='flex flex-col justify-center items-center flex-1'>
+      <main className='mt-20 flex flex-1 flex-col items-center justify-center'>
         <Title />
       </main>
     </div>

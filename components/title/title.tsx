@@ -1,10 +1,17 @@
 const Title = () => {
-    return (
-        <div className='flex items-center justify-center relative h-full'>
-            <h1 className="font-extrabold text-25xl select-none text-neutral-900 absolute z-2 drop-shadow-md shadow-white">X</h1>
-            <div className="text-white font-black text-5xl sm:text-6xl md:text-9xl select-none relative z-1"><span className="animate-gradient-x text-transparent bg-clip-text bg-gradient-to-r from-green-500 from-30% via-blue-600 via-50% to-purple-600 to-70%">SWAMP</span>HACKS</div>
-        </div>
-    );
-}
+  return (
+    <div className='relative flex flex-col items-center justify-center'>
+      <h1 className='text-25xl z-2 absolute select-none bg-neutral-900 bg-clip-text font-extrabold text-transparent drop-shadow-[0px_0px_3px_rgba(255,255,255,0.5)]'>
+        X
+      </h1>
+      <h1 className='z-1 relative select-none text-5xl font-black text-white drop-shadow-[0px_3px_4px_rgba(255,255,255,0.5)] sm:text-6xl md:text-9xl'>
+        <span className='animate-gradient-x bg-gradient-to-r from-green-500 from-30% via-blue-600 via-50% to-purple-600 to-70% bg-clip-text text-transparent'>
+          SWAMP
+        </span>
+        HACKS
+      </h1>
+    </div>
+  );
+};
 
 export default Title;
