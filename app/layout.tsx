@@ -6,7 +6,7 @@ import React from 'react';
 const RalewayRegular = Raleway({
   display: 'swap',
   subsets: ['latin'],
-  weight: ['500', '700'],
+  weight: ['500', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
