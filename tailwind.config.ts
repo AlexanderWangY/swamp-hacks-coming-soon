@@ -14,42 +14,42 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        'gradient-x':'gradient-x 5s ease infinite',
-        'gradient-y':'gradient-y 15s ease infinite',
-        'gradient-xy':'gradient-xy 15s ease infinite',
+        'gradient-x': 'gradient-x 5s ease infinite',
+        'gradient-y': 'gradient-y 15s ease infinite',
+        'gradient-xy': 'gradient-xy 15s ease infinite',
       },
       keyframes: {
         'gradient-y': {
           '0%, 100%': {
-              'background-size':'400% 400%',
-              'background-position': 'center top'
+            'background-size': '400% 400%',
+            'background-position': 'center top',
           },
           '50%': {
-              'background-size':'200% 200%',
-              'background-position': 'center center'
-          }
-      },
-      'gradient-x': {
+            'background-size': '200% 200%',
+            'background-position': 'center center',
+          },
+        },
+        'gradient-x': {
           '0%, 100%': {
-              'background-size':'200% 200%',
-              'background-position': 'left center'
+            'background-size': '200% 200%',
+            'background-position': 'left center',
           },
           '50%': {
-              'background-size':'200% 200%',
-              'background-position': 'right center'
-          }
-      },
-      'gradient-xy': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+        'gradient-xy': {
           '0%, 100%': {
-              'background-size':'400% 400%',
-              'background-position': 'left center'
+            'background-size': '400% 400%',
+            'background-position': 'left center',
           },
           '50%': {
-              'background-size':'200% 200%',
-              'background-position': 'right center'
-          }
-      }
-      }
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+      },
     },
     screens: {
       sm: '640px',
@@ -77,6 +77,9 @@ const config: Config = {
       '12xl': ['14rem', { lineHeight: '1' }],
       '13xl': ['16rem', { lineHeight: '1' }],
       '14xl': ['18rem', { lineHeight: '1' }],
+      '15xl': ['20rem', { lineHeight: '1' }],
+      '16xl': ['22rem', { lineHeight: '1' }],
+      '17xl': ['24rem', { lineHeight: '1' }],
       '20xl': ['55rem', { lineHeight: '1' }],
       '25xl': ['65rem', { lineHeight: '1' }],
       '30xl': ['75rem', { lineHeight: '1' }],
