@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -12,9 +13,10 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hackathon': "url('/images/example1.jpg')" // THIS IS A PLACEHOLDER
       },
       animation: {
-        'gradient-x': 'gradient-x 5s ease infinite',
+        'gradient-x': 'gradient-x 4s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
       },
