@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgb(11, 11, 11);
+  background-color: rgb(21, 21, 21);
 }
 
 ::-webkit-scrollbar {

@@ -1,9 +1,16 @@
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import React from 'react';
 
 const RalewayRegular = Raleway({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['500', '700', '800', '900'],
+});
+
+const PoppinsFont = Poppins({
   display: 'swap',
   subsets: ['latin'],
   weight: ['500', '700', '800', '900'],
@@ -21,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={RalewayRegular.className}>{children}</body>
+      <body className={PoppinsFont.className}>{children}</body>
     </html>
   );
 }

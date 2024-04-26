@@ -5,19 +5,14 @@ import Title from '@/components/title/title';
 
 export default function Home() {
   return (
-    <>
-      <div className='flex h-screen flex-col'>
-        <Header />
-        <main className='mt-20 flex flex-1 flex-col items-center justify-center'>
-          <Title />
-        </main>
-      </div>
-      <div className='flex h-screen flex-1 flex-col items-center justify-center bg-cover'>
-        <p className='text-3xl font-bold text-white opacity-100'>
-          University of Florida&apos;s premiere hackathon celebrates its 10th
-          anniversary.
-        </p>
-      </div>
-    </>
+    <div className='relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden'>
+      <h1 className='animate-text1 absolute text-5xl text-white'>
+        University of Florida&apos;s biggest hackathon...
+      </h1>
+      <h1 className='animate-text2 absolute text-5xl text-white opacity-0'>
+        Celebrates it&apos;s 10th anniversary.
+      </h1>
+      <Title />
+    </div>
   );
 }
