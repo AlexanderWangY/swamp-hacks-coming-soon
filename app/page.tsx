@@ -7,12 +7,6 @@ import { motion, animate, useAnimate } from 'framer-motion';
 export default function Home() {
   const [scope, animate] = useAnimate();
 
-  useEffect(() => {
-    animateRed();
-    animateBlue();
-    animateGreen();
-  }, []);
-
   const animateRed = async () => {
     while (true) {
       await animate(
@@ -81,6 +75,17 @@ export default function Home() {
       );
     }
   };
+
+  useEffect(() => {
+    animateRed();
+    animateBlue();
+    animateGreen();
+
+    return () => {
+      // cleanup
+    };
+  }, []);
+
 
   return (
     <div className='flex h-screen w-screen flex-row items-center justify-evenly'>
