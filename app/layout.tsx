@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Syne, Poppins, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import React from 'react';
 
@@ -7,6 +7,24 @@ const RalewayRegular = Raleway({
   display: 'swap',
   subsets: ['latin'],
   weight: ['500', '700', '800', '900'],
+});
+
+const SyneFont = Syne({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['500', '700', '800'],
+});
+
+const PoppinsFont = Poppins({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['500', '700', '800'],
+});
+
+const SpaceGroteskFont = Space_Grotesk({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={RalewayRegular.className}>{children}</body>
+      <body className={PoppinsFont.className}>{children}</body>
     </html>
   );
 }

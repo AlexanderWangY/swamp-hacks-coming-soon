@@ -9,46 +9,34 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animationFillMode: {
+        forwards: 'forwards',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'hackathon': "url('/images/example1.jpg')" // THIS IS A PLACEHOLDER
+        hackathon: "url('/images/example1.jpg')", // THIS IS A PLACEHOLDER
       },
       animation: {
-        'gradient-x': 'gradient-x 4s ease infinite',
-        'gradient-y': 'gradient-y 15s ease infinite',
-        'gradient-xy': 'gradient-xy 15s ease infinite',
+        logo1: 'logo1 2s',
+        'slide-right-rotate': 'slide-right-rotate 2s',
       },
       keyframes: {
-        'gradient-y': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'center top',
+        logo1: {
+          '0%': {
+            opacity: '0',
           },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'center center',
+          '100%': {
+            opacity: '1',
           },
         },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center',
+        'slide-right-rotate': {
+          '0%': {
+            transform: 'translateX(13rem) rotate(0)',
           },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center',
-          },
-        },
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center',
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center',
+          '100%': {
+            transform: 'translateX(0) rotate(0)',
           },
         },
       },
