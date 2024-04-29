@@ -2,101 +2,62 @@
 import swampHacksLogo from '@/public/logos/swamphacks_code_logo.svg';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { motion, animate, useAnimate } from 'framer-motion';
+import { useAnimate, motion } from 'framer-motion';
 
 export default function Home() {
   const [scope, animate] = useAnimate();
+  const [text, setText] = useState('celebrates 10 years of excellence');
 
-  const animateRed = async () => {
-    while (true) {
-      await animate(
-        '#red',
-        {
-          x: '0rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-      await animate(
-        '#red',
-        {
-          x: '6rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-    }
-  };
+  const animateFrames = async () => {
+    await animate(
+      '#frame1',
+      { opacity: 1 },
+      { duration: 1, delay: 0.5, ease: 'easeOut' }
+    );
+    await animate(
+      '#frame1',
+      { opacity: 0 },
+      { duration: 1, delay: 1, ease: 'easeOut' }
+    );
+    await animate('#frame2', { opacity: 1 }, { duration: 1, ease: 'easeOut' });
+    await animate(
+      '#frame2',
+      { opacity: 0 },
+      { duration: 1, delay: 1, ease: 'easeOut' }
+    );
 
-  const animateBlue = async () => {
-    while (true) {
-      await animate(
-        '#blue',
-        {
-          x: '6rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-      await animate(
-        '#blue',
-        {
-          x: '0rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-    }
-  };
-
-  const animateGreen = async () => {
-    while (true) {
-      await animate(
-        '#green',
-        {
-          x: '6rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-      await animate(
-        '#green',
-        {
-          x: '0rem',
-        },
-        {
-          duration: 2,
-        }
-      );
-    }
+    animate('#text-1', { opacity: 1 }, { duration: 1, ease: 'easeOut' });
+    animate('#x', { opacity: 1 }, { duration: 1, ease: 'easeOut' });
   };
 
   useEffect(() => {
-    animateRed();
-    animateBlue();
-    animateGreen();
-
-    return () => {
-      // cleanup
-    };
+    animateFrames();
   }, []);
 
-
   return (
-    <div className='flex h-screen w-screen flex-row items-center justify-evenly'>
-      <div className='flex h-full flex-col justify-center'>
-        <h1 className='text-8xl font-bold text-gray-200'>Swamphacks</h1>
-        <p className='self-end text-2xl text-gray-400'>Coming Spring 2025...</p>
+    <div
+      ref={scope}
+      className='relative flex h-screen w-screen flex-row items-center justify-evenly overflow-hidden'
+    >
+      <h1 id='frame1' className='absolute text-3xl text-white opacity-0'>
+        University of Florida&apos;s premiere hackathon
+      </h1>
+      <h1 id='frame2' className='absolute text-3xl text-white opacity-0'>
+        {text}
+      </h1>
+
+      <div
+        id='text-1'
+        className='flex flex-col items-end p-10 text-white opacity-0'
+      >
+        <h1 className='text-8xl font-bold'>Swamphacks</h1>
+        <p className='text-2xl font-thin'>Coming soon</p>
       </div>
-      <div ref={scope} className='flex h-full flex-col justify-center'>
-        <div id='green' className='h-24 w-24 bg-green-400'></div>
-        <div id='red' className='h-24 w-24 translate-x-24 bg-red-400'></div>
-        <div id='blue' className='h-24 w-24 bg-blue-400'></div>
+
+      <div id='x' className='text-white opacity-0'>
+        <h1 className='text-17xl font-extrabold drop-shadow-[0_5px_30px_rgba(255,255,255,0.10)]'>
+          X
+        </h1>
       </div>
     </div>
   );

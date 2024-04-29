@@ -18,7 +18,7 @@ const SyneFont = Syne({
 const PoppinsFont = Poppins({
   display: 'swap',
   subsets: ['latin'],
-  weight: ['500', '700', '800'],
+  weight: ['200', '300', '400', '500', '700', '800'],
 });
 
 const SpaceGroteskFont = Space_Grotesk({
