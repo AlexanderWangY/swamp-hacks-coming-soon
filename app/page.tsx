@@ -3,10 +3,11 @@ import swampHacksLogo from '@/public/logos/swamphacks_code_logo.svg';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useAnimate, motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
 
 export default function Home() {
   const [scope, animate] = useAnimate();
-  const [text, setText] = useState('celebrates 10 years of excellence');
+  const [loading, setLoading] = useState(true);
 
   const animateFrames = async () => {
     await animate(
@@ -25,40 +26,43 @@ export default function Home() {
       { opacity: 0 },
       { duration: 1, delay: 1, ease: 'easeOut' }
     );
-
-    animate('#text-1', { opacity: 1 }, { duration: 1, ease: 'easeOut' });
-    animate('#x', { opacity: 1 }, { duration: 1, ease: 'easeOut' });
   };
 
   useEffect(() => {
-    animateFrames();
+    animateFrames().then(() => setLoading(false));
   }, []);
 
   return (
     <div
       ref={scope}
-      className='relative flex h-screen w-screen flex-row items-center justify-evenly overflow-hidden'
+      className='flex h-screen w-screen flex-col overflow-hidden'
     >
-      <h1 id='frame1' className='absolute text-3xl text-white opacity-0'>
-        University of Florida&apos;s premiere hackathon
-      </h1>
-      <h1 id='frame2' className='absolute text-3xl text-white opacity-0'>
-        {text}
-      </h1>
-
-      <div
-        id='text-1'
-        className='flex flex-col items-end p-10 text-white opacity-0'
-      >
-        <h1 className='text-8xl font-bold'>Swamphacks</h1>
-        <p className='text-2xl font-thin'>Coming soon</p>
-      </div>
-
-      <div id='x' className='text-white opacity-0'>
-        <h1 className='text-17xl font-extrabold drop-shadow-[0_5px_30px_rgba(255,255,255,0.10)]'>
-          X
-        </h1>
-      </div>
+      {loading ? (
+        <div className='relative flex h-full w-full flex-col items-center justify-center border border-red-500'>
+          <h1
+            id='frame1'
+            className='absolute justify-self-center text-3xl opacity-0'
+          >
+            University of Florida&apos;s premiere hackathon
+          </h1>
+          <h1
+            id='frame2'
+            className='absolute justify-self-center text-3xl opacity-0'
+          >
+            celebrates 10 years of excellence
+          </h1>
+        </div>
+      ) : (
+        <>
+          <div className='w-full flex-col border border-black p-8 text-6xl tracking-tight text-black sm:inline-flex sm:flex-row sm:p-5 sm:text-8xl md:p-8 md:text-9xl lg:text-10xl xl:text-12xl'>
+            <h1 className='font-thin'>Swamp</h1>
+            <h1 className='flex justify-end font-normal sm:justify-start'>
+              Hacks
+            </h1>
+          </div>
+          <div className='flex w-full grow flex-row border border-red-500'></div>
+        </>
+      )}
     </div>
   );
 }

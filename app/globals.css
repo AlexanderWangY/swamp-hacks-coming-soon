@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgb(11, 11, 11);
+  background-image: url('../public/images/background-grid1.svg');
+  background-size: cover;
 }
-
 ::-webkit-scrollbar {
   width: 3px; /* Adjust the width of the scrollbar */
 }
