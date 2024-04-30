@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-image: url('../public/images/background-grid1.svg');
+  background-image: url('../public/images/background-dark.svg');
   background-size: cover;
 }
 ::-webkit-scrollbar {
