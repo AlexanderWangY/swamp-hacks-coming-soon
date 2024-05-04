@@ -15,7 +15,7 @@ const Header = () => {
             alt='SwampHacks Logo'
           />
         </a>
-        <Link href={'/'} className=''>
+        <Link href={'/'} className='hidden sm:flex'>
           <p className={`text-3xl font-bold`}>SwampHacks X</p>
         </Link>
         <HeaderLink link='#'>Schedule</HeaderLink>

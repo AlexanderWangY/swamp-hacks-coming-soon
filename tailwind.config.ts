@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animationFillMode: {
+        forwards: 'forwards',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -16,25 +19,30 @@ const config: Config = {
         hackathon: "url('/images/example1.jpg')", // THIS IS A PLACEHOLDER
       },
       animation: {
-        "text1": "text1 2.5s ease-in-out forwards",
-        "text2": "2.5s text1 2.5s ease-in-out forwards",
-        "title-text": "2.5s title-text 5s ease-out forwards",
-        "x-text": "4s x-text 7.5s ease-out forwards"
+        logo1: 'logo1 2s',
+        'slide-right-rotate': 'slide-right-rotate 2s',
       },
       keyframes: {
-        "text1": {
-          "0%": { opacity: "0" },
-          "50%": { opacity: "1" },
-          "100%": { opacity: "0" },
+        logo1: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
         },
-        "title-text": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+        'slide-right-rotate': {
+          '0%': {
+            transform: 'translateX(13rem) rotate(0)',
+          },
+          '100%': {
+            transform: 'translateX(0) rotate(0)',
+          },
         },
-        "x-text": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        }
+        'x-text': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
     screens: {
@@ -66,10 +74,11 @@ const config: Config = {
       '15xl': ['20rem', { lineHeight: '1' }],
       '16xl': ['22rem', { lineHeight: '1' }],
       '17xl': ['24rem', { lineHeight: '1' }],
-      '20xl': ['55rem', { lineHeight: '1' }],
-      '25xl': ['65rem', { lineHeight: '1' }],
-      '30xl': ['75rem', { lineHeight: '1' }],
-      '40xl': ['95rem', { lineHeight: '1' }],
+      '18xl': ['26rem', { lineHeight: '1' }],
+      '19xl': ['28rem', { lineHeight: '1' }],
+      '20xl': ['30rem', { lineHeight: '1' }],
+      '21xl': ['32rem', { lineHeight: '1' }],
+      '22xl': ['34rem', { lineHeight: '1' }],
     },
   },
   plugins: [],
