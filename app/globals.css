@@ -17,3 +17,12 @@
   background-color: #242424; /* Set the color of the scrollbar thumb */
   border-radius: 4px; /* Add rounded corners to the scrollbar thumb */
 }
+
+.border-padding {
+  padding: 0.2rem;
+}
+
+.x-size {
+  font-size: 70rem;
+  color: #151515;
+}
