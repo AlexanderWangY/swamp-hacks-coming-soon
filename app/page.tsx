@@ -197,6 +197,9 @@ export default function Home() {
 
         <div className='flex w-2/3 flex-row justify-evenly'>
           <button
+            onClick={() => {
+              window.location.href = 'mailto:info@swamphacks.com';
+            }}
             id='sponsor-button'
             className='w-44 rounded-md bg-white px-5 py-3 text-xl text-black opacity-0 shadow-[] transition-all hover:bg-zinc-300'
           >
