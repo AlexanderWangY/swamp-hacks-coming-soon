@@ -23,6 +23,26 @@
 }
 
 .x-size {
-  font-size: 70rem;
   color: #1e1e1e;
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+  .x-size {
+    font-size: 30rem;
+  }
+}
+
+/* For screens between 768px and 1023px (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .x-size {
+    font-size: 50rem;
+  }
+}
+
+/* For screens larger than 1024px (desktops) */
+@media (min-width: 1024px) {
+  .x-size {
+    font-size: 70rem;
+  }
 }
