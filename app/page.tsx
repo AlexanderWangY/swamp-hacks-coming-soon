@@ -4,6 +4,7 @@ import DiscordIcon from '../public/logos/discord.svg';
 import { useAnimate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import X from '../public/images/X.svg';
 
 export default function Home() {
   const [scope, animate] = useAnimate();
@@ -63,7 +64,7 @@ export default function Home() {
       {
         duration: 2,
         ease: 'easeInOut',
-        delay: 1.3,
+        delay: 1,
       }
     );
 
@@ -157,29 +158,31 @@ export default function Home() {
     } catch (e) {
       console.error(e);
     }
-  }, []);
+
+    return () => {};
+  });
 
   return (
     <div
       ref={scope}
-      className='relative flex h-screen w-screen flex-col items-center overflow-hidden sm:justify-center'
+      className='relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden'
     >
-      <h1
-        id='x-text'
-        className='x-size absolute z-[-1] select-none font-bold opacity-0'
-      >
-        X
-      </h1>
-      <div className='mt-5 flex h-fit w-fit flex-col items-center justify-center'>
+      <div className='mt-5 flex h-5/6 w-fit flex-col items-center justify-center sm:h-fit sm:justify-center'>
+        <Image
+          className='absolute z-[-100] mb-60 opacity-0 sm:mb-0 md:h-[80%] md:w-[80%] lg:h-[90%] lg:w-[100%]'
+          id='x-text'
+          src={X}
+          alt='X logo'
+        />
         <div
           id='modal'
-          className='border-padding flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0'
+          className='border-padding mb-3 flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0 sm:mb-0'
         >
           <p className='h-full w-full rounded-full bg-black px-4 py-2 text-sm text-white sm:text-lg'>
             10th Anniversary
           </p>
         </div>
-        <div className='sm: mb-5 flex select-none flex-col items-center justify-center text-white md:text-8xl lg:text-11xl'>
+        <div className='mb-5 flex select-none flex-col items-center justify-center text-7xl text-white md:text-8xl lg:text-11xl'>
           <h1 id='swamp' className='mb-[-5%] font-semibold opacity-0'>
             SWAMP
           </h1>
@@ -195,29 +198,31 @@ export default function Home() {
           >
             <p>Florida&apos;s Flagship Hackathon</p>
             <p>Gainesville, FL</p>
-            <span className='from-green-500 from-20% via-purple-600 via-80% to-pink-500'>
+            <p className='from-green-500 from-20% via-purple-600 via-80% to-pink-500'>
               Coming Spring 2025
-            </span>
+            </p>
           </div>
         ) : (
           <div id='subtext' className='mb-10 text-xl text-zinc-300 opacity-0'>
-            Florida&apos;s Flagship Hackathon{' '}
-            <span className='tracking-tighter text-zinc-500'>&lt;/&gt;</span>{' '}
-            Gainesville, FL{' '}
-            <span className='tracking-tighter text-zinc-500'>&lt;/&gt;</span>{' '}
-            <span className='from-green-500 from-20% via-purple-600 via-80% to-pink-500'>
-              Coming Spring 2025
-            </span>
+            <p>
+              Florida&apos;s Flagship Hackathon{' '}
+              <span className='tracking-tighter text-zinc-500'>&lt;/&gt;</span>{' '}
+              Gainesville, FL{' '}
+              <span className='tracking-tighter text-zinc-500'>&lt;/&gt;</span>{' '}
+              <span className='from-green-500 from-20% via-purple-600 via-80% to-pink-500'>
+                Coming Spring 2025
+              </span>
+            </p>
           </div>
         )}
 
-        <div className='flex w-5/6 flex-col items-center justify-evenly border sm:w-2/3 sm:flex-row'>
+        <div className='flex h-fit w-5/6 flex-col items-center justify-evenly sm:h-fit sm:w-2/3 sm:flex-row'>
           <button
             onClick={() => {
               window.location.href = 'mailto:info@swamphacks.com';
             }}
             id='sponsor-button'
-            className='w-full rounded-md bg-white px-5 py-3 text-xl text-black opacity-0 shadow-[] transition-all hover:bg-zinc-300 sm:w-44'
+            className='mt-10 h-16 w-full rounded-md bg-white px-5 py-3 text-xl text-black opacity-0 transition-all hover:bg-zinc-300 sm:mt-0 sm:w-44'
           >
             Sponsor Us
           </button>
@@ -226,7 +231,7 @@ export default function Home() {
               window.open('https://discord.swamphacks.com', '_blank')
             }
             id='discord-button'
-            className='flex w-full flex-row items-center justify-evenly rounded-md border border-zinc-800 bg-zinc-950 px-5 py-3 text-xl text-white opacity-0 transition-all hover:border-zinc-700 sm:w-44'
+            className='mt-5 flex h-16 w-full flex-row items-center justify-evenly rounded-md border border-zinc-800 bg-zinc-950 px-5 py-3 text-xl text-white opacity-0 transition-all hover:border-zinc-700 sm:mt-0 sm:w-44'
           >
             Discord
             <Image
@@ -234,7 +239,7 @@ export default function Home() {
               alt='Discord Icon'
               style={{
                 height: 'auto',
-                width: '25%',
+                width: '20%',
               }}
             />
           </button>
