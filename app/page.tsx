@@ -165,7 +165,7 @@ export default function Home() {
   return (
     <div
       ref={scope}
-      className='relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden'
+      className='relative flex h-screen w-screen flex-col items-center justify-center overflow-x-hidden overflow-y-hidden'
     >
       <div className='mt-5 flex h-5/6 w-fit flex-col items-center justify-center sm:h-fit sm:justify-center'>
         <Image
