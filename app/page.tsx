@@ -176,13 +176,13 @@ export default function Home() {
         />
         <div
           id='modal'
-          className='border-padding mb-3 flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0 sm:mb-0'
+          className='border-padding mb-3 flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0 sm:mt-8'
         >
           <p className='h-full w-full rounded-full bg-black px-4 py-2 text-sm text-white sm:text-lg'>
             10th Anniversary
           </p>
         </div>
-        <div className='mb-5 flex select-none flex-col items-center justify-center text-7xl text-white md:text-8xl lg:text-11xl'>
+        <div className='mb-5 flex select-none flex-col items-center justify-center text-7xl text-white sm:text-10xl lg:text-11xl'>
           <h1 id='swamp' className='mb-[-5%] font-semibold opacity-0'>
             SWAMP
           </h1>
@@ -222,7 +222,7 @@ export default function Home() {
               window.location.href = 'mailto:info@swamphacks.com';
             }}
             id='sponsor-button'
-            className='mt-10 h-16 w-full rounded-md bg-white px-5 py-3 text-xl text-black opacity-0 transition-all hover:bg-zinc-300 sm:mt-0 sm:w-44'
+            className='mt-16 h-16 w-full rounded-md bg-white px-5 py-3 text-xl text-black opacity-0 transition-all hover:bg-zinc-300 sm:mt-0 sm:w-44'
           >
             Sponsor Us
           </button>
@@ -248,11 +248,17 @@ export default function Home() {
 
       {/* For intro  */}
 
-      <h1 id='first' className='absolute text-3xl text-white opacity-0'>
+      <h1
+        id='first'
+        className='absolute text-center text-2xl text-white opacity-0 sm:text-3xl'
+      >
         University of Florida&apos;s flagship hackathon
       </h1>
 
-      <h1 id='second' className='absolute text-3xl text-white opacity-0'>
+      <h1
+        id='second'
+        className='absolute text-center text-2xl text-white opacity-0 sm:text-3xl'
+      >
         celebrates its 10th anniversary.
       </h1>
     </div>
