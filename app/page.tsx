@@ -176,7 +176,7 @@ export default function Home() {
         />
         <div
           id='modal'
-          className='border-padding mb-3 flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0 sm:mt-8'
+          className='border-padding mb-3 mt-9 flex items-center justify-center rounded-full bg-gradient-to-r from-green-500 from-20% via-purple-600 via-80% to-pink-500 opacity-0'
         >
           <p className='h-full w-full rounded-full bg-black px-4 py-2 text-sm text-white sm:text-lg'>
             10th Anniversary
